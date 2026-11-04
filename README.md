@@ -10,14 +10,13 @@ A responsive AI image studio with a premium Cutout.pro-inspired workflow and VAM
 ## Deploy
 
 ### 1. GitHub Pages
-In repository Settings → Pages, choose **Deploy from a branch**, branch `main`, folder `/ (root)`. Or enable Actions and use the included workflow.
+In repository Settings → Pages, set **Build and deployment → Source** to **GitHub Actions**. The included workflow publishes the site on pushes to `main`.
 
 ### 2. Cloudflare Worker
-1. Create a Cloudflare account and install Wrangler locally: `npm install -g wrangler`.
-2. From the repository root run `wrangler login`.
-3. Set the secret: `wrangler secret put CUTOUT_API_KEY` and paste your Cutout.pro key into the hidden prompt.
-4. Deploy: `wrangler deploy`.
-5. Copy the Worker URL (for example `https://vamsh-ai-api.<your-subdomain>.workers.dev`).
+1. Install Node.js/npm, then open a terminal in the repository root.
+2. Run `bash scripts/deploy-worker.sh` (or run `npx wrangler login`, `npx wrangler secret put CUTOUT_API_KEY`, and `npx wrangler deploy` one by one).
+3. Paste your Cutout.pro API key only into Wrangler's hidden prompt. Never commit it.
+4. Copy the Worker URL printed after deployment (for example `https://vamsh-ai-api.<your-subdomain>.workers.dev`).
 
 ### 3. Connect frontend to Worker
 Open `assets/app.js` and replace `YOUR_CLOUDFLARE_WORKER_URL` with your deployed Worker URL. Commit the change. GitHub Pages will publish automatically.
