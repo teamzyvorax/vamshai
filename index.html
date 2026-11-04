@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="VAMSH AI — your creative image studio. Remove backgrounds and transform images with AI.">
+  <title>VAMSH AI — Creative Image Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="VAMSH AI home"><span class="brand-mark">V</span><span>VAMSH<span class="brand-ai"> AI</span><small>CREATIVE STUDIO</small></span></a>
+    <nav><a href="#tools">AI Tools</a><a href="#studio">Studio</a><a href="#how">How it works</a></nav>
+    <a class="top-cta" href="#studio">Open Studio <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> YOUR CREATIVE AI WORKSPACE</div>
+        <h1>Make every image<br><span class="gradient-text">extraordinary.</span></h1>
+        <p class="hero-lead">Powerful AI tools. A cleaner workflow. Your creativity, without limits.</p>
+        <div class="hero-actions"><a class="button primary" href="#studio">Start creating <span>→</span></a><a class="button secondary" href="#tools">Explore AI tools</a></div>
+        <div class="hero-proof"><span class="proof-avatars">✦ ◈ ✧</span><span>One simple studio for your image workflow</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract AI image studio artwork">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="art-card card-back"><div class="art-sun"></div><div class="art-lines"></div></div>
+        <div class="art-card card-front"><div class="art-chip">AI / IMAGE LAB</div><div class="art-object"><div class="object-ring"></div><div class="object-core"></div></div><div class="art-caption"><span>CREATIVE MODE</span><b>ON</b></div></div>
+        <div class="float-tag tag-top">✦ AI POWERED</div><div class="float-tag tag-bottom">01 — CREATE</div>
+      </div>
+    </section>
+    <section class="trust-strip"><span>BUILT FOR CREATORS</span><i></i><span>FAST WORKFLOWS</span><i></i><span>QUALITY OUTPUT</span><i></i><span>VAMSH ORIGINAL</span></section>
+    <section class="section" id="tools">
+      <div class="section-heading"><div><div class="eyebrow">THE TOOLKIT</div><h2>Everything starts with <span class="gradient-text">an idea.</span></h2></div><p>Explore a growing collection of AI-powered creative tools, all in one place.</p></div>
+      <div class="tool-grid">
+        <article class="tool-card featured-tool"><div class="tool-icon violet">✂</div><span class="tool-status live">AVAILABLE</span><h3>Background Remover</h3><p>Make any subject stand out with a transparent background.</p><a href="#studio">Try tool <span>↗</span></a><div class="tool-art cutout-art"><div></div></div></article>
+        <article class="tool-card"><div class="tool-icon blue">✧</div><span class="tool-status planned">COMING SOON</span><h3>Photo Enhancer</h3><p>Bring clarity and detail back to your favourite photos.</p><span class="muted-link">In the roadmap</span></article>
+        <article class="tool-card"><div class="tool-icon pink">◉</div><span class="tool-status planned">COMING SOON</span><h3>Face Cutout</h3><p>Extract portraits and create clean, ready-to-use assets.</p><span class="muted-link">In the roadmap</span></article>
+        <article class="tool-card"><div class="tool-icon orange">⌁</div><span class="tool-status planned">COMING SOON</span><h3>Image Retouch</h3><p>Remove distractions and polish your images.</p><span class="muted-link">In the roadmap</span></article>
+        <article class="tool-card"><div class="tool-icon green">◌</div><span class="tool-status planned">COMING SOON</span><h3>Photo Colorizer</h3><p>Give old monochrome memories a new life.</p><span class="muted-link">In the roadmap</span></article>
+        <article class="tool-card"><div class="tool-icon gold">▣</div><span class="tool-status planned">COMING SOON</span><h3>Passport Photo</h3><p>Prepare portrait photos for your next application.</p><span class="muted-link">In the roadmap</span></article>
+      </div>
+    </section>
+    <section class="studio-section" id="studio">
+      <div class="section-heading"><div><div class="eyebrow">VAMSH AI STUDIO / 01</div><h2>Remove the background.<br><span class="gradient-text">Keep the magic.</span></h2></div><p>Upload a photo and let AI isolate your subject. Download a transparent PNG when processing finishes.</p></div>
+      <div class="workspace">
+        <div class="upload-panel">
+          <div class="panel-top"><span>01 / UPLOAD IMAGE</span><span class="format-note">PNG · JPG · WEBP · max 15 MB</span></div>
+          <label class="dropzone" id="dropzone" for="file-input">
+            <input id="file-input" type="file" accept="image/png,image/jpeg,image/webp,image/bmp">
+            <span class="upload-symbol">↑</span><strong>Drop your image here</strong><span>or <u>browse files</u></span><small>Up to 4096 × 4096 pixels</small>
+          </label>
+          <div class="file-row" id="file-row" hidden><span class="file-type">IMG</span><span id="file-name">image.png</span><button id="clear-file" class="text-button" type="button">Remove</button></div>
+          <label class="check-row"><input type="checkbox" id="preview-mode" checked><span><b>Preview mode</b><small>Uses lower-resolution preview processing where supported.</small></span><span class="preview-tag">LOWER COST</span></label>
+          <button class="button primary process-button" id="process-btn" disabled>Remove background <span>→</span></button>
+          <p class="privacy-note">♢ Your image is sent securely to the processing service through our backend.</p>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+        </div>
+        <div class="result-panel">
+          <div class="panel-top"><span>02 / YOUR RESULT</span><span class="result-state" id="result-state">WAITING FOR IMAGE</span></div>
+          <div class="result-stage checkerboard" id="result-stage"><div class="empty-result"><div class="result-glyph">✧</div><b>Your result appears here</b><span>Upload an image to begin creating.</span></div></div>
+          <a class="button download-button disabled" id="download-btn" href="#" download="vamsh-ai-background-removed.png" aria-disabled="true">↓ Download PNG</a>
+        </div>
+      </div>
+    </section>
+    <section class="how-section" id="how"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>Three steps. <span class="gradient-text">One great result.</span></h2><div class="steps"><div><span>01</span><h3>Upload</h3><p>Choose a photo from your device.</p></div><div><span>02</span><h3>Let AI work</h3><p>Our secure backend sends it to Cutout.pro.</p></div><div><span>03</span><h3>Download</h3><p>Save your transparent PNG and keep creating.</p></div></div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">V</span><span>VAMSH<span class="brand-ai"> AI</span><small>CREATIVE STUDIO</small></span></a><span>Made for your next big idea. © <span id="year"></span> VAMSH AI</span><a href="https://www.cutout.pro/api-document/" target="_blank" rel="noreferrer">Powered by Cutout.pro API ↗</a></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
