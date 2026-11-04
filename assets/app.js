@@ -1,4 +1,4 @@
-const API_BASE = "YOUR_CLOUDFLARE_WORKER_URL";
+const API_BASE = "https://vamshai.team-zyvorax.workers.dev";
 const input = document.getElementById("file-input");
 const dropzone = document.getElementById("dropzone");
 const processButton = document.getElementById("process-btn");
