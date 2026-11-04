@@ -1,8 +1,8 @@
-name = "vamsh-ai-api"
+name = "vamshai"
 main = "worker/index.js"
 compatibility_date = "2026-11-04"
 
 [vars]
 # Comma-separated exact frontend origins after GitHub Pages is enabled.
 # Example: ALLOWED_ORIGINS = "https://teamzyvorax.github.io"
-ALLOWED_ORIGINS = ""
+ALLOWED_ORIGINS = "https://teamzyvorax.github.io"
